@@ -1,0 +1,49 @@
+h2 {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  border: 1px solid #000;
+  width: 400px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  
+  background-color: #990000;
+  color: #fff;
+  left: -10px;
+  
+  padding: 5px 0;
+  position: relative;
+  
+  width: 420px;
+}
+
+h3:before {
+  border-color: transparent #7C0000 #7C0000 transparent;
+  border-style: solid;
+  border-width: 5px;
+  
+  content: "";
+  left: 0;
+  position: absolute;
+  top: -10px;
+}
+
+h3:after {
+  border-color: transparent transparent #7C0000 #7C0000;
+  border-style: solid;
+  border-width: 5px;
+  
+  content:"";
+  position:absolute;
+  right:0;
+  top:-10px;
+}
