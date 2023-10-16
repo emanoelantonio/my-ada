@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ada | Front End</title>
+</head>
+<body>
+  <header>
+    <h2>Desafio Formulário 1.0</h2>
+  </header>
+  <form class="formulario" action="">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade:</label>
+        <input 
+          type="number" 
+          id="idade" 
+          name="idade" 
+          min="18" 
+          required
+        >
+
+        <label for="telefone">Telefone:</label>
+        <input 
+          type="tel" 
+          id="telefone" 
+          name="telefone" 
+          pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" 
+          required
+        >
+
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+        </select>
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input 
+          type="date" 
+          id="data-nascimento" 
+          name="data-nascimento" 
+          min="1900-01-01" 
+          max="2005-01-01" 
+          required
+        >
+    </fieldset>
+
+    <fieldset>
+        <legend>Agendamento</legend>
+        <label for="horario-atendimento">Horário de Atendimento:</label>
+        <input 
+          type="time" 
+          id="horario-atendimento" 
+          name="horario-atendimento" 
+          min="07:00" 
+          max="17:00" 
+          required
+        >
+    </fieldset>
+
+    <fieldset>
+        <legend>Hobbies</legend>
+        <input type="checkbox" id="hobby1" name="hobby1" value="hobby1">
+        <label for="hobby1">Hobby 1</label>
+        <input type="checkbox" id="hobby2" name="hobby2" value="hobby2">
+        <label for="hobby2">Hobby 2</label>
+        <input type="checkbox" id="hobby3" name="hobby3" value="hobby3">
+        <label for="hobby3">Hobby 3</label>
+        <input type="checkbox" id="hobby4" name="hobby3" value="hobby4">
+        <label for="hobby4">Hobby 4</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Cores</legend>
+        <label for="cores">Escolha sua cor favorita</label>
+        <select name="cores" id="cores" >
+          <option value="verde">Verde</option>
+          <option value="azul">Azul</option>
+          <option value="vermelho">Vermelho</option>
+          <option value="amarelo">Amarelo</option>
+          <option value="marrom">Marrom</option>
+          <option value="lilas">Lilás</option>
+        </select>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+</form>
+</body>
+
+</html>

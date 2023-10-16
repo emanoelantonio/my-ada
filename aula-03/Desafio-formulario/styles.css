@@ -1,0 +1,80 @@
+:root {
+  --cor-fundo: #f0f0f0;
+  --cor-borda: #ccc;
+  --cor-fonte: #333;
+  --btn-submit: green;
+  --btn-reset: #7058f8;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    color: var(--cor-fonte);
+}
+
+header {
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+legend {
+    padding: 20px;
+}
+
+.formulario {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario input[type="date"],
+.formulario input[type="time"],
+.formulario select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 3px;
+}
+
+.formulario input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]{
+    background-color: var(--btn-submit);
+}
+
+button[type="submit"]:hover {
+    background-color: #00b27d;
+}
+
+button[type="reset"]{
+    background-color: var(--btn-reset);
+}
+
+button[type="reset"]:hover {
+    background-color: #6421cf;
+}
