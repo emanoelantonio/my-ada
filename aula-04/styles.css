@@ -1,0 +1,130 @@
+:root {
+  --cor-rosa-claro: #FFC7C7;
+  --cor-rosa-meio: #FFE2E2;
+  --cor-cinza-claro: #F6F6F6;
+  --cor-roxa: #8785A2;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cabecalho {
+  position: relative;
+  background: url('./assets/banner.jpg') no-repeat center center/cover;
+  height: 200px; 
+  color: #fff; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabecalho h1 {
+  font-size: 52px;
+  padding-bottom: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7); 
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+  font-weight: bold;
+  color: var(--cor-roxa);
+}
+
+.lateral-esquerda {
+  background-color: var(--cor-cinza-claro);
+  padding: 20px;
+  float: left;
+  width: 200px;
+}
+
+.secao {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.carrossel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carrossel .slide {
+  display: none;
+}
+
+.carrossel .slide img {
+  width: 100%;
+  max-width: 600px;
+  height: max-content;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: black;
+  padding: 10px 15px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.rodape {
+  background-color: var(--cor-roxa);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo para as imagens da secão*/
+.secao img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para os detalhes */
+.detalhes {
+  margin-bottom: 20px;
+}
+
+/* Estilo para os links */
+a {
+  color: var(--cor-rosa-claro);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cor-rosa-claro);
+  text-decoration: underline;
+}
