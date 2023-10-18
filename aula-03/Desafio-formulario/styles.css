@@ -1,5 +1,5 @@
 :root {
-  --cor-fundo: #f0f0f0;
+  --cor-fundo: #3c2640;
   --cor-borda: #ccc;
   --cor-fonte: #333;
   --btn-submit: green;
@@ -17,6 +17,7 @@ header {
 }
 
 h2 {
+    color: white;
   text-align: center;
 }
 
@@ -25,11 +26,13 @@ legend {
 }
 
 .formulario {
-    width: 300px;
+    width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid var(--cor-borda);
     border-radius: 5px;
+    background-color: #333;
+    color: white;
 }
 
 .formulario label {
@@ -42,7 +45,7 @@ legend {
 .formulario input[type="date"],
 .formulario input[type="time"],
 .formulario select {
-    width: 100%;
+    width: 75%;
     padding: 5px;
     margin-bottom: 15px;
     border: 1px solid var(--cor-borda);
@@ -63,8 +66,14 @@ legend {
     cursor: pointer;
 }
 
+.grupo-botoes {
+    margin-top: 20px;
+    display: flex;
+}
+
 button[type="submit"]{
     background-color: var(--btn-submit);
+    margin-right: 10px;
 }
 
 button[type="submit"]:hover {
