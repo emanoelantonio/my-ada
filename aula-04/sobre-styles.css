@@ -1,0 +1,102 @@
+:root {
+  --cor-rosa-claro: #FFC7C7;
+  --cor-rosa-meio: #FFE2E2;
+  --cor-cinza-claro: #F6F6F6;
+  --cor-roxa: #8785A2;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cabecalho {
+  position: relative;
+  background: url('./assets/banner.jpg') no-repeat center center/cover;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabecalho h1 {
+  font-size: 52px;
+  padding-bottom: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+  font-weight: bold;
+  color: var(--cor-roxa);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar li a {
+  color: var(--cor-rosa-claro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+  color: white;
+}
+
+.navbar li:hover a {
+  color: white;
+}
+
+.corpo {
+  
+  background-color: var(--cor-rosa-meio);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: var(--cor-roxa);
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.secao {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.rodape {
+  background-color: var(--cor-roxa);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
