@@ -9,7 +9,6 @@ div {
   flex-direction: column;
 }
 
-/* Estilos para a tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -27,20 +26,17 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Estilos para a imagem */
 img {
     max-width: 100px;
     height: auto;
     display: block;
 }
 
-/* Estilos para a lista não ordenada */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
-/* Estilos para o parágrafo dentro da célula da tabela */
 td p {
     margin: 0;
     font-size: 14px;
