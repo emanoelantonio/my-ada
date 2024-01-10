@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>POO | Lista de Tarefas</title>
+</head>
+<body>
+  <main>
+    <h1>Lista de Tarefas</h1>
+    <section id="formulario">
+      <div class="campo-formulario">
+        <label for="">Título
+          <input type="text" name="titulo">
+        </label>
+      </div>
+      <div class="campo-formulario">
+        <label for="">Descrição
+          <input type="text" name="descricao">
+        </label>
+      </div>
+      <div class="acoes">
+        <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+      </div>
+    </section>
+  
+    <section id="pendentes">
+      <h2>Pendentes</h2>
+      <ul>
+        <!-- <li>
+          <label>
+            <input type="checkbox">
+            <em>Comprar Pão</em>
+          </label>
+        </li> -->
+      </ul>
+    </section>
+  
+    <section id="concluidas">
+      <h2>Concluídos</h2>
+      <ul>
+        <!-- <li>
+          <em>Comprar Pão</em>
+          <span>11/12/2023, 19:56</span>
+        </li> -->
+      </ul>
+    </section>
+    </section>
+  </main>
+  <script src="./js/Classes.js"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+</html>
