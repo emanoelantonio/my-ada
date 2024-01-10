@@ -1,0 +1,15 @@
+:root {
+  --logo-color: #F20505
+  --text-color: #F2F2F2 ;
+  --background-color: #F2A2A9;
+  --btn-hover: #F20530;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+}
