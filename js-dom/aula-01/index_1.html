@@ -1,0 +1,30 @@
+<!-- - Crie um formulário com um campo de **input**. Use JavaScript para validar se 
+o campo está preenchido quando o formulário for enviado. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Validação</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="campo">Campo:</label>
+    <input type="text" id="campo" name="campo">
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault(); // Impede o envio automático do formulário
+      
+      const valorCampo = document.getElementById('campo').value;
+      
+      if (!valorCampo.trim() === '') {
+        alert('Por favor, preencha o campo!')
+      }
+      alert('Formulário enviado com sucesso!');
+    }
+    // Adiciona um event listener para o evento de submit do formulário
+    document.getElementById('myForm').addEventListener('submit', validarFormulario);
+  </script>
+</body>
+</html>

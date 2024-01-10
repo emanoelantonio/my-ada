@@ -1,0 +1,35 @@
+<!-- 
+  Crie um uma div que, ao ser clicada, exiba a quantidade de cliques consecutivos 
+  executados. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itens Clicados</title>
+  <style>
+    .counter {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter" onclick="cliques()"></div>
+
+  <script>
+    let counter = 0;
+    function cliques(){
+      counter++;
+      document.querySelector('.counter').innerText = `Cliques: ${counter}`;
+    }
+  </script>
+</body>
+</html>

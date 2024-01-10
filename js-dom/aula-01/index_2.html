@@ -1,0 +1,35 @@
+<!-- - Crie uma página com um elemento <div> para exibir a hora atual em um formato de relógio digital.
+  Atualize o conteúdo a cada segundo. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relógio Digital</title>
+  <style>
+    .clock {
+      font-size: 36px;
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock"></div>
+  <script>
+    function updateTime() {
+      const options = { 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric', 
+        hour12: false };
+      
+        const timeString = new Intl.DateTimeFormat('pt-BR', options).format(new Date());
+
+      document.getElementsByClassName('clock')[0].innerText = timeString;
+    }
+    setInterval(updateTime, 1000);
+
+    updateTime();
+  </script>
+</body>
+</html>

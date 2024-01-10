@@ -1,0 +1,42 @@
+<!-- Crie um botão que, ao ser clicado, incrementa um contador exibido na página. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão Contador</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn" id="btn">Counter</button>
+  <p id="count">0</p>
+
+  <script>
+    const button = document.getElementById("btn");
+    const p = document.getElementById("count");
+
+    let count = 0;
+    button.addEventListener('click', () => {
+      count++;
+      p.textContent = count;
+    })
+  </script>
+</body>
+
+</html>
