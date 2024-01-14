@@ -11,9 +11,6 @@ document.getElementById('formulario').addEventListener('submit', function (event
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  if (!name && phone && birthdate && email && password) {
-    alert('Por favor, preencha todos os campos.');
-  }
   const payload = {
     name: name,
     surname: sobrenome,
@@ -26,6 +23,10 @@ document.getElementById('formulario').addEventListener('submit', function (event
     password: password
   };
   console.log(payload);
+  
+  if (!payload) {
+    alert('Por favor, preencha todos os campos.');
+  }
 
   dadosCadastrados.innerHTML = `
   <h2>Dados do Cadastro:</h2>
@@ -40,8 +41,16 @@ document.getElementById('formulario').addEventListener('submit', function (event
   <p><strong>Senha:</strong> ${password}</p>
   `;
 
-  let inputs = this.querySelectorAll('input[type="text"], input[type="email"], select, textarea');
-  for (let i = 0; i < inputs.length; i++) {
-    inputs[i].value = '';
+  let inputs = this.querySelectorAll(`
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="password"]
+    `
+  );
+  for (const input of inputs) {
+    input.value = '';
   }
 });
