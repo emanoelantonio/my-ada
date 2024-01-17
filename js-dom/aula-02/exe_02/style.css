@@ -5,6 +5,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
  }
+ .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+ }
  
  #formulario label {
   display: block;
@@ -37,7 +44,9 @@
  }
  
  #dadosCadastrados {
+  width: 1024px;
   margin-top: 20px;
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
