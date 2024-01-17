@@ -31,21 +31,33 @@ formulario.addEventListener("submit", (event) => {
       password
     }
     
-  }
-  const dadosCadastrados = document.getElementById('dadosCadastrados');
+    const dadosCadastrados = document.getElementById('dadosCadastrados');
+  
+    dadosCadastrados.innerHTML = `
+      <h2>Dados do Cadastro:</h2>
+      <p><strong>Nome:</strong> ${payload.nome} ${payload.sobrenome}</p>
+      <p><strong>Profissão:</strong> ${payload.profissao}</p>
+      <p><strong>CPF:</strong> ${payload.cpf}</p>
+      <p><strong>Endereço:</strong> ${payload.endereco}</p>
+      <p><strong>Telefone:</strong> ${payload.phone}</p>
+      <p><strong>Data de Nascimento:</strong> ${payload.birthdate}</p>
+      <p><strong>E-mail:</strong> ${payload.email}</p>
+      <p><strong>Senha:</strong> ${payload.password}</p>
+    `;
 
-  dadosCadastrados.innerHTML = `
-  <h2>Dados do Cadastro:</h2>
-  <p><strong>Nome:</strong> ${name}</p>
-  <p><strong>Sobrenome:</strong> ${surname}</p>
-  <p><strong>Profissão:</strong> ${profession}</p>
-  <p><strong>CPF:</strong> ${documentNumber}</p>
-  <p><strong>Endereço:</strong> ${address}</p>
-  <p><strong>Telefone:</strong> ${phone}</p>
-  <p><strong>Data de Nascimento:</strong> ${birthdate}</p>
-  <p><strong>E-mail:</strong> ${email}</p>
-  <p><strong>Senha:</strong> ${password}</p>
-  `;
+    const textInputs = document.querySelectorAll(`
+      input[type="text"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="email"],
+      input[type="password"]
+    `
+    );
+
+    textInputs.forEach((input) => {
+      input.value = '';
+    });
+  }
 
 });
 
@@ -54,12 +66,21 @@ function validateFormOnSubmit() {
 
   inputs.forEach((field) => {
     if (field && !field.value) {
-      field.nextElementSibling.classList.add("error");
-      field.nextElementSibling.classList.remove("hide-error");
+      const nextElementSibling = field.nextElementSibling;
+
+      if (nextElementSibling) {
+        nextElementSibling.classList.add("error");
+        nextElementSibling.classList.remove("hide-error");
+      }
+
       hasError = true;
     } else {
-      field.nextElementSibling.classList.add("hide-error");
-      field.nextElementSibling.classList.remove("error");
+      const nextElementSibling = field.nextElementSibling;
+
+      if (nextElementSibling) {
+        nextElementSibling.classList.add("hide-error");
+        nextElementSibling.classList.remove("error");
+      }
     }
   })
 
@@ -113,24 +134,12 @@ function validateFields() {
 }
 
 function compareDates(input) {
-  const birthDate = new Date(input.value + "T00:00:00");
-  const today = new Date();
-
-  const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: false
-  });
-
-  const formattedBirthDate = dateFormatter.format(birthDate);
-  const formattedToday = dateFormatter.format(today);
+  const birthDate = new Date(input.value + "T00:00:00").setHours(0,0,0,0);
+  const today = new Date().setHours(0,0,0,0);
 
   if (birthDate >= today) {
-    input.nextElementSibling.innerText = `A data de nascimento (${formattedBirthDate}) precisa ser menor que a data atual (${formattedToday}).`;
+    input.nextElementSibling.innerText =
+      "A data de nascimento precisa ser menor que a data atual.";
     showErrorMessage(input);
   }
 }
